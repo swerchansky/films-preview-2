@@ -1,4 +1,4 @@
-package swerchansky.films.preview
+package swerchansky.films
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
