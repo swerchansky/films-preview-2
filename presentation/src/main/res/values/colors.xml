@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFF</color>
+    <color name="title">#0C0C0C</color>
+    <color name="search_icon">#0094ff</color>
+    <color name="film_name">#0C0C0C</color>
+    <color name="film_additional">#7C7C7C</color>
+</resources>

@@ -12,6 +12,7 @@ buildscript {
         set("coreKtxVersion", "1.9.0")
         set("lifeCycleVersion", "2.6.2")
         set("activityComposeVersion", "1.7.0")
+        set("coroutinesVersion", "1.3.9")
         set("daggerVersion", "2.16")
 
         set("junitVersion", "4.13.2")
@@ -53,6 +54,7 @@ buildscript {
         set(
             "domainDependencies", mapOf(
                 "androidCoreKtx" to "androidx.core:core-ktx:${extra["coreKtxVersion"]}",
+                "activityCompose" to "androidx.activity:activity-compose:${extra["activityComposeVersion"]}",
                 "dagger" to "com.google.dagger:dagger:${extra["daggerVersion"]}",
             )
         )
@@ -69,6 +71,7 @@ buildscript {
                 "androidLifecycle" to "androidx.lifecycle:lifecycle-runtime-ktx:${extra["lifeCycleVersion"]}",
                 "activityCompose" to "androidx.activity:activity-compose:${extra["activityComposeVersion"]}",
                 "dagger" to "com.google.dagger:dagger:${extra["daggerVersion"]}",
+                "coroutines" to "org.jetbrains.kotlinx:kotlinx-coroutines-android:${extra["coroutinesVersion"]}",
             )
         )
 

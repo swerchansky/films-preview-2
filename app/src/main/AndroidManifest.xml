@@ -14,7 +14,7 @@
         android:theme="@style/Theme.FilmsPreview"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.activity.main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.FilmsPreview">
             <intent-filter>
