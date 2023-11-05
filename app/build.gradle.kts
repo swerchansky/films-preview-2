@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -32,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -59,6 +60,9 @@ dependencies {
     implementation(appDependencies["androidLifecycle"].toString())
     implementation(appDependencies["activityCompose"].toString())
     implementation(appDependencies["dagger"].toString())
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+    kapt(appDependencies["daggerCompiler"].toString())
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -72,7 +76,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation(project(":presentation"))
     implementation(project(":data"))
     implementation(project(":domain"))
 }

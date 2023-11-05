@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -28,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
@@ -42,6 +43,12 @@ dependencies {
 
     implementation(dataDependencies["androidCoreKtx"].toString())
     implementation(dataDependencies["dagger"].toString())
+    implementation(dataDependencies["retrofit"].toString())
+    implementation(dataDependencies["retrofitJackson"].toString())
+    implementation(dataDependencies["retrofitScalars"].toString())
+    implementation(dataDependencies["jackson"].toString())
+    kapt(dataDependencies["daggerCompiler"].toString())
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0")
     testImplementation(dataTestDependencies["junit"].toString())
     androidTestImplementation(dataTestDependencies["supportJunit"].toString())
     androidTestImplementation(dataTestDependencies["espresso"].toString())

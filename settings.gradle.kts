@@ -17,4 +17,3 @@ rootProject.name = "films preview"
 include(":app")
 include(":domain")
 include(":data")
-include(":presentation")

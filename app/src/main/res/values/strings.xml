@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">films preview</string>
+    <string name="barTitle">Популярные</string>
 </resources>
